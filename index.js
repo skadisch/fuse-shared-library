@@ -1,7 +1,12 @@
 const os = require('os')
 
 const arch = os.arch()
-const platform = os.platform() + (arch === 'arm' ? '-arm' : '')
+
+let platform = os.platform();
+
+if (arch === 'arm' || arch === 'arm64') {
+  platform = `${platform}-${arch}`;
+}
 
 switch (platform) {
   case 'darwin':
@@ -12,6 +17,9 @@ switch (platform) {
     break
   case 'linux-arm':
     module.exports = require('fuse-shared-library-linux-arm')
+    break
+  case 'linux-arm64':
+    module.exports = require('fuse-shared-library-linux-arm64')
     break
    default:
     throw new Error(`fuse-shared-library is not currently supported on: ${platform}`)
