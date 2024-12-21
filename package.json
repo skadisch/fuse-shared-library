@@ -23,7 +23,7 @@
     "fuse-shared-library-darwin": "^1.0.3",
     "fuse-shared-library-linux": "^1.0.1",
     "fuse-shared-library-linux-arm": "^1.0.0",
-    "fuse-shared-library-linux-arm64": "git+https://github.com/k13-engineering/fuse-shared-library-linux-arm64.git#96ece680f54a518c5e38d1ce30c8d53af30fcd79"
+    "fuse-shared-library-linux-arm64": "git+https://github.com/k13-engineering/fuse-shared-library-linux-arm64.git#c15747e052d66baf37cff2b39f63e28ecf3f0ff1"
   },
   "devDependencies": {
     "standard": "^12.0.1"
